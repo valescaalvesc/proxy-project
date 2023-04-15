@@ -23,7 +23,7 @@ public class UsuarioProxy implements IUsuario{
     @Override
     public List<String> obterAcessos(Time time) {
         if (!time.isCybersecurity()) {
-            throw new IllegalArgumentException("Funcionário não autorizado");
+            throw new IllegalArgumentException("Time não autorizado");
         }
         if (this.usuario == null) {
             this.usuario = new Usuario(this.hostname);
